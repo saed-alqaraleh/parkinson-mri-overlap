@@ -1,0 +1,41 @@
+experiment_name: repeated_seed_endpoints
+architectures: [swin_tiny, convnext_tiny]
+folds: [0, 1, 2, 3, 4]
+overlap_levels: [0, 100]
+replicates: 1
+replicate_seed_offsets: [100000]
+pretrained: true
+require_cuda: true
+preprocessing:
+  grayscale_decode: true
+  direct_resize: [224, 224]
+  resize_interpolation: area
+  replicate_to_rgb: true
+  normalization: ImageNet mean/std from selected TorchVision pretrained weights
+  validation_test_augmentation: false
+  training_augmentation:
+    rotation_radians: 0.025
+    translation_fraction_xy: 0.04
+    zoom_fraction: 0.06
+    contrast_fraction: 0.10
+training:
+  loss: BCEWithLogitsLoss
+  optimizer: Adam
+  class_weights: false
+  effective_batch_size: 64
+  max_micro_batch_size: 64
+  mixed_precision: true
+  head_epochs: 8
+  finetune_epochs: 20
+  patience: 4
+  head_lr: 0.0001
+  finetune_lr: 0.00001
+  num_workers: 2
+analysis:
+  primary_estimand: patient_roc_auc_100_minus_0
+  threshold_min: 0.05
+  threshold_max: 0.95
+  threshold_step: 0.005
+  bootstrap_replicates: 10000
+  analysis_seed: 20260910
+  common_held_out_post_hoc: true

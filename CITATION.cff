@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite this research software and the associated journal article once published."
+title: "Sensitivity of Patient-Level Parkinson Disease MRI Evaluation to Training–Test Subject Overlap"
+type: software
+repository-code: "https://github.com/saed-alqaraleh/parkinson-mri-overlap-reproducibility"
+version: "1.0.0"
+date-released: 2026-11-13
+license: MIT
+keywords:
+  - "Parkinson disease"
+  - "magnetic resonance imaging"
+  - "evaluation reproducibility"
+  - "subject identity overlap"
+  - "data leakage"
+authors:
+  - family-names: Ahmad
+    given-names: "Baraa Alsyed"
+    affiliation: "Hasan Kalyoncu University"
+  - family-names: Alqaraleh
+    given-names: Saed
+    affiliation: "Mutah University"
+    orcid: "https://orcid.org/0000-0002-7146-3905"

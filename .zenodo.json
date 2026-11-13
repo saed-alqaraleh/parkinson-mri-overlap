@@ -1,0 +1,30 @@
+{
+  "title": "Sensitivity of Patient-Level Parkinson Disease MRI Evaluation to Training–Test Subject Overlap",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Ahmad, Baraa Alsyed",
+      "affiliation": "Hasan Kalyoncu University"
+    },
+    {
+      "name": "Alqaraleh, Saed",
+      "affiliation": "Mutah University",
+      "orcid": "0000-0002-7146-3905"
+    }
+  ],
+  "description": "Research software, frozen evaluation protocol and auditable patient-level evaluation for training–test subject overlap sensitivity in Parkinson MRI. This is not a diagnostic or clinical tool.",
+  "license": "MIT",
+  "keywords": [
+    "medical imaging",
+    "Parkinson disease",
+    "subject identity overlap",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ails-lab/ntua-parkinson-dataset",
+      "relation": "isDerivedFrom",
+      "scheme": "url"
+    }
+  ]
+}

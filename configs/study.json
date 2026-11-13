@@ -1,0 +1,69 @@
+{
+  "dataset": {
+    "frozen_subjects": 68,
+    "pd_subjects": 48,
+    "non_pd_subjects": 20,
+    "frozen_image_records": 42147,
+    "source_dataset": "https://github.com/ails-lab/ntua-parkinson-dataset"
+  },
+  "outer_folds": 5,
+  "fold_base_training_seeds": [
+    42,
+    101,
+    202,
+    303,
+    404
+  ],
+  "second_seed_offset": 100000,
+  "overlap_levels_pct": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "max_injected_slices_per_subject": 50,
+  "max_injected_fraction_per_subject": 0.2,
+  "minimum_test_slices_remaining_per_subject": 2,
+  "primary_estimand": "fold-paired patient ROC-AUC difference (100% minus 0%)",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260910,
+    "unit": "diagnosis-stratified subject resample within fixed fold",
+    "conditional_on_fixed_fits": true
+  },
+  "architectures": {
+    "ResNet50V2": [
+      0,
+      25,
+      50,
+      75,
+      100
+    ],
+    "VGG19": [
+      0,
+      100
+    ],
+    "ConvNeXt-Tiny": [
+      0,
+      100
+    ],
+    "Swin-Tiny": [
+      0,
+      100
+    ]
+  },
+  "keras_training": {
+    "image_size": [
+      224,
+      224
+    ],
+    "batch_size": 64,
+    "head_epochs": 8,
+    "fine_tune_epochs": 20,
+    "patience": 4,
+    "head_learning_rate": 0.0001,
+    "fine_tune_learning_rate": 1e-05
+  },
+  "note": "Recorded outer partition assignments are never regenerated from a training seed."
+}

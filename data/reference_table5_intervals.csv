@@ -1,0 +1,7 @@
+architecture,scope,printed_ci_low,printed_ci_high
+ResNet50V2,second_seed,0.052,0.234
+ConvNeXt-Tiny,second_seed,0.0,0.12
+Swin-Tiny,second_seed,-0.032,0.073
+ResNet50V2,seed_average,0.049,0.166
+ConvNeXt-Tiny,seed_average,0.015,0.096
+Swin-Tiny,seed_average,-0.028,0.071
